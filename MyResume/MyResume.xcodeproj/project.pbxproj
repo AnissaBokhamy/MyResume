@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		F48916B925012AF30046DB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916B825012AF30046DB81 /* AppDelegate.swift */; };
 		F48916BB25012AF30046DB81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916BA25012AF30046DB81 /* SceneDelegate.swift */; };
-		F48916BD25012AF30046DB81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916BC25012AF30046DB81 /* ViewController.swift */; };
 		F48916C025012AF30046DB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48916BE25012AF30046DB81 /* Main.storyboard */; };
 		F48916C325012AF30046DB81 /* MyResume.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F48916C125012AF30046DB81 /* MyResume.xcdatamodeld */; };
 		F48916C525012AF90046DB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48916C425012AF90046DB81 /* Assets.xcassets */; };
 		F48916C825012AF90046DB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48916C625012AF90046DB81 /* LaunchScreen.storyboard */; };
+		F48916D025012BA10046DB81 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48916CF25012BA10046DB81 /* Colors.xcassets */; };
+		F48916D225017C3E0046DB81 /* LeftMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48916D125017C3E0046DB81 /* LeftMessageView.xib */; };
+		F48916D425018D490046DB81 /* RightMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48916D325018D490046DB81 /* RightMessageView.xib */; };
+		F48916D8250191B20046DB81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916D7250191B20046DB81 /* ProfileViewController.swift */; };
+		F48916DA2501993B0046DB81 /* LeftMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */; };
+		F48916DC250199650046DB81 /* RightMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916DB250199650046DB81 /* RightMessageViewCell.swift */; };
+		F48916DE2501A19A0046DB81 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48916DD2501A19A0046DB81 /* Image.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F48916B525012AF30046DB81 /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48916B825012AF30046DB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48916BA25012AF30046DB81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F48916BC25012AF30046DB81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F48916BF25012AF30046DB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F48916C225012AF30046DB81 /* MyResume.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyResume.xcdatamodel; sourceTree = "<group>"; };
 		F48916C425012AF90046DB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F48916C725012AF90046DB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48916C925012AF90046DB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48916CF25012BA10046DB81 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F48916D125017C3E0046DB81 /* LeftMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMessageView.xib; sourceTree = "<group>"; };
+		F48916D325018D490046DB81 /* RightMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightMessageView.xib; sourceTree = "<group>"; };
+		F48916D7250191B20046DB81 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessageViewCell.swift; sourceTree = "<group>"; };
+		F48916DB250199650046DB81 /* RightMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageViewCell.swift; sourceTree = "<group>"; };
+		F48916DD2501A19A0046DB81 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +70,30 @@
 		F48916B725012AF30046DB81 /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
+				F48916D7250191B20046DB81 /* ProfileViewController.swift */,
 				F48916B825012AF30046DB81 /* AppDelegate.swift */,
 				F48916BA25012AF30046DB81 /* SceneDelegate.swift */,
-				F48916BC25012AF30046DB81 /* ViewController.swift */,
 				F48916BE25012AF30046DB81 /* Main.storyboard */,
+				F48916D125017C3E0046DB81 /* LeftMessageView.xib */,
+				F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */,
+				F48916D325018D490046DB81 /* RightMessageView.xib */,
+				F48916DB250199650046DB81 /* RightMessageViewCell.swift */,
+				F48916CF25012BA10046DB81 /* Colors.xcassets */,
 				F48916C425012AF90046DB81 /* Assets.xcassets */,
+				F48916DF2501A3420046DB81 /* Ressources */,
 				F48916C625012AF90046DB81 /* LaunchScreen.storyboard */,
 				F48916C925012AF90046DB81 /* Info.plist */,
 				F48916C125012AF30046DB81 /* MyResume.xcdatamodeld */,
 			);
 			path = MyResume;
+			sourceTree = "<group>";
+		};
+		F48916DF2501A3420046DB81 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				F48916DD2501A19A0046DB81 /* Image.xcassets */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,8 +154,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48916D225017C3E0046DB81 /* LeftMessageView.xib in Resources */,
+				F48916D425018D490046DB81 /* RightMessageView.xib in Resources */,
 				F48916C825012AF90046DB81 /* LaunchScreen.storyboard in Resources */,
+				F48916D025012BA10046DB81 /* Colors.xcassets in Resources */,
 				F48916C525012AF90046DB81 /* Assets.xcassets in Resources */,
+				F48916DE2501A19A0046DB81 /* Image.xcassets in Resources */,
 				F48916C025012AF30046DB81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,9 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48916C325012AF30046DB81 /* MyResume.xcdatamodeld in Sources */,
-				F48916BD25012AF30046DB81 /* ViewController.swift in Sources */,
+				F48916DC250199650046DB81 /* RightMessageViewCell.swift in Sources */,
+				F48916D8250191B20046DB81 /* ProfileViewController.swift in Sources */,
 				F48916B925012AF30046DB81 /* AppDelegate.swift in Sources */,
 				F48916BB25012AF30046DB81 /* SceneDelegate.swift in Sources */,
+				F48916DA2501993B0046DB81 /* LeftMessageViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
