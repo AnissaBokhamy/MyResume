@@ -15,10 +15,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePicture: UIImageView!
     
     @IBOutlet weak var conversationTableView: UITableView!
-    @IBOutlet weak var responseOptionsStackView: UIStackView!
+    @IBOutlet weak var questionOptionsStackView: UIStackView!
     
     
     var person : Person?
+    var personIsLookingForAnswer = false
     
     var questionsAndAnswersList = [String]()
     
@@ -67,16 +68,22 @@ extension ProfileViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row % 2 == 0 {
+            // Person is talking / answering
             let cell = self.conversationTableView.dequeueReusableCell(withIdentifier: "LeftMessage", for: indexPath) as! LeftMessageViewCell
             let photoName = self.person?.photoName ?? ""
             if photoName != "" {
                 cell.speakerProfilePictureView.image = UIImage(named: photoName)
             }
+            // TODO add loading view
+            /*if self.personIsLookingForAnswer {
+                
+            }*/
             if indexPath.row < self.questionsAndAnswersList.count {
                 cell.messageLabel.text = self.questionsAndAnswersList[indexPath.row]
             }
             return cell
         } else {
+            // User is asking a question
             let cell = self.conversationTableView.dequeueReusableCell(withIdentifier: "RightMessage", for: indexPath) as! RightMessageViewCell
             if self.person?.photoName != nil && self.person?.photoName != "" {
                 cell.speakerProfilePictureView.image = UIImage(named: (self.person?.photoName)!)
@@ -92,5 +99,33 @@ extension ProfileViewController : UITableViewDataSource {
 }
 
 extension ProfileViewController : UITableViewDelegate {
+    
+}
+
+
+// Display of questions
+extension ProfileViewController : ConversationDelegate {
+    func personDidAnswer() {
+        self.questionsAndAnswersList.append("...")
+        self.questionOptionsStackView.isHidden = false
+        self.conversationTableView.reloadData()
+    }
+    
+    func userDidAskQuestion(_ question: String) {
+        if self.questionsAndAnswersList.last == "..." {
+            // add question to stack view
+            self.questionsAndAnswersList.popLast()
+            self.questionsAndAnswersList.append(question)
+            self.conversationTableView.reloadData()
+            self.questionOptionsStackView.isHidden = true
+            
+            // loading and find the appropriate answer
+            self.personIsLookingForAnswer = true
+            //self.questionOptionsStackView.
+            
+            
+        }
+    }
+    
     
 }

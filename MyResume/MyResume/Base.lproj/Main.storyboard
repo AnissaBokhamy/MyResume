@@ -20,13 +20,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0II-rx-Rel">
-                                        <rect key="frame" x="157.5" y="38" width="99" height="28"/>
+                                        <rect key="frame" x="157.5" y="38" width="99" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastName" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOj-uU-Sm9">
-                                        <rect key="frame" x="167" y="58" width="80" height="24"/>
+                                        <rect key="frame" x="167.5" y="57.5" width="79.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -53,27 +53,42 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65q-FU-sXl">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWV-Av-YR0">
                                 <rect key="frame" x="0.0" y="752" width="414" height="61"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-ss-tf8">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="GYa-Lp-5uF"/>
+                                    <constraint firstItem="Xdf-ss-tf8" firstAttribute="centerX" secondItem="YWV-Av-YR0" secondAttribute="centerX" id="1d2-zB-4p6"/>
+                                    <constraint firstAttribute="height" constant="61" id="9ff-cq-djO"/>
+                                    <constraint firstItem="Xdf-ss-tf8" firstAttribute="leading" secondItem="YWV-Av-YR0" secondAttribute="leading" id="BCG-fr-i7S"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xdf-ss-tf8" secondAttribute="trailing" id="CNj-q8-VCS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xdf-ss-tf8" secondAttribute="bottom" id="IpH-U7-7Rp"/>
+                                    <constraint firstItem="Xdf-ss-tf8" firstAttribute="top" secondItem="YWV-Av-YR0" secondAttribute="top" id="U1R-l6-xNB"/>
+                                    <constraint firstItem="Xdf-ss-tf8" firstAttribute="bottom" secondItem="xFw-a5-6fJ" secondAttribute="bottom" id="d1E-ry-Ms6"/>
                                 </constraints>
-                            </stackView>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aKF-LB-XWx"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xFw-a5-6fJ"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YWV-Av-YR0" firstAttribute="leading" secondItem="nnD-9Z-5vk" secondAttribute="leading" id="7ka-u6-HYB"/>
                             <constraint firstItem="fJF-6z-xkQ" firstAttribute="top" secondItem="v9r-5H-tsA" secondAttribute="bottom" constant="25" id="86q-Xu-hvW"/>
-                            <constraint firstItem="65q-FU-sXl" firstAttribute="top" secondItem="fJF-6z-xkQ" secondAttribute="bottom" id="CdJ-t6-V9o"/>
                             <constraint firstItem="6Gw-gg-9Sh" firstAttribute="leading" secondItem="nnD-9Z-5vk" secondAttribute="leading" id="GoX-wt-BeU"/>
                             <constraint firstItem="nnD-9Z-5vk" firstAttribute="trailing" secondItem="6Gw-gg-9Sh" secondAttribute="trailing" id="LSY-Ew-uHO"/>
+                            <constraint firstItem="YWV-Av-YR0" firstAttribute="top" secondItem="nnD-9Z-5vk" secondAttribute="bottom" constant="-61" id="QPa-gX-Tyr"/>
                             <constraint firstItem="fJF-6z-xkQ" firstAttribute="leading" secondItem="nnD-9Z-5vk" secondAttribute="leading" id="R5d-UE-8zn"/>
-                            <constraint firstItem="65q-FU-sXl" firstAttribute="leading" secondItem="nnD-9Z-5vk" secondAttribute="leading" id="YK6-4q-DwY"/>
                             <constraint firstItem="v9r-5H-tsA" firstAttribute="centerX" secondItem="nnD-9Z-5vk" secondAttribute="centerX" id="ZGT-a2-HtW"/>
+                            <constraint firstItem="nnD-9Z-5vk" firstAttribute="trailing" secondItem="YWV-Av-YR0" secondAttribute="trailing" id="bpq-nA-g1Z"/>
                             <constraint firstItem="v9r-5H-tsA" firstAttribute="centerY" secondItem="6Gw-gg-9Sh" secondAttribute="bottom" id="f3r-fk-TkW"/>
+                            <constraint firstItem="YWV-Av-YR0" firstAttribute="top" secondItem="fJF-6z-xkQ" secondAttribute="bottom" id="gfn-Xw-4vB"/>
                             <constraint firstItem="nnD-9Z-5vk" firstAttribute="trailing" secondItem="fJF-6z-xkQ" secondAttribute="trailing" id="kwo-3T-q5w"/>
+                            <constraint firstItem="nnD-9Z-5vk" firstAttribute="bottom" secondItem="YWV-Av-YR0" secondAttribute="bottom" id="nn5-CO-Zt6"/>
                             <constraint firstAttribute="top" secondItem="6Gw-gg-9Sh" secondAttribute="top" id="sNq-yu-x3z"/>
-                            <constraint firstItem="nnD-9Z-5vk" firstAttribute="bottom" secondItem="65q-FU-sXl" secondAttribute="bottom" id="v5H-tq-hnP"/>
-                            <constraint firstItem="nnD-9Z-5vk" firstAttribute="trailing" secondItem="65q-FU-sXl" secondAttribute="trailing" id="vHn-zU-i9s"/>
+                            <constraint firstItem="nnD-9Z-5vk" firstAttribute="bottom" secondItem="fJF-6z-xkQ" secondAttribute="bottom" constant="61" id="ycN-kf-VBj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nnD-9Z-5vk"/>
                     </view>
@@ -83,7 +98,7 @@
                         <outlet property="firstNameLabel" destination="0II-rx-Rel" id="KBY-mb-73D"/>
                         <outlet property="lastNameLabel" destination="nOj-uU-Sm9" id="PrR-p5-3Zq"/>
                         <outlet property="profilePicture" destination="v9r-5H-tsA" id="cRR-bb-aTQ"/>
-                        <outlet property="responseOptionsStackView" destination="65q-FU-sXl" id="XcG-Gb-ecL"/>
+                        <outlet property="questionOptionsStackView" destination="Xdf-ss-tf8" id="UAc-kL-lG2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
