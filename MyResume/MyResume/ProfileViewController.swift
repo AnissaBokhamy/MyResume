@@ -15,10 +15,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePicture: UIImageView!
     
     @IBOutlet weak var conversationTableView: UITableView!
-    @IBOutlet weak var questionOptionsStackView: UIStackView!
+    //@IBOutlet weak var questionOptionsStackView: UIStackView!
+    @IBOutlet weak var questionOptionsCollectionView: UICollectionView!
     
     
-    var person : Person?
+    weak var person : Person?
     var personIsLookingForAnswer = false
     
     var questionsAndAnswersList = [String]()
@@ -28,8 +29,10 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.conversationTableView.delegate = self
         self.conversationTableView.dataSource = self
-        self.conversationTableView.register(LeftMessageViewCell.self, forCellReuseIdentifier: "LeftMessage")
-        self.conversationTableView.register(RightMessageViewCell.self, forCellReuseIdentifier: "RightMessage")
+        //self.conversationTableView.register(LeftMessageViewCell.self, forCellReuseIdentifier: "LeftMessage")
+        //self.conversationTableView.register(RightMessageViewCell.self, forCellReuseIdentifier: "RightMessage")
+        
+        self.questionOptionsCollectionView.dataSource = self
         
         guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else {
             fatalError("Unable to read managed object context.")
@@ -46,6 +49,7 @@ class ProfileViewController: UIViewController {
             self.profilePicture.image = UIImage(named: photoName)
         }
         self.questionsAndAnswersList.append(self.person?.catchPhrase ?? "...")
+        self.questionOptionsCollectionView.isHidden = true
     }
     
 
@@ -80,6 +84,7 @@ extension ProfileViewController : UITableViewDataSource {
             }*/
             if indexPath.row < self.questionsAndAnswersList.count {
                 cell.messageLabel.text = self.questionsAndAnswersList[indexPath.row]
+                cell.messageLabel.sizeToFit()
             }
             return cell
         } else {
@@ -107,7 +112,8 @@ extension ProfileViewController : UITableViewDelegate {
 extension ProfileViewController : ConversationDelegate {
     func personDidAnswer() {
         self.questionsAndAnswersList.append("...")
-        self.questionOptionsStackView.isHidden = false
+        //self.questionOptionsStackView.isHidden = false
+        self.questionOptionsCollectionView.isHidden = false
         self.conversationTableView.reloadData()
     }
     
@@ -117,7 +123,8 @@ extension ProfileViewController : ConversationDelegate {
             self.questionsAndAnswersList.popLast()
             self.questionsAndAnswersList.append(question)
             self.conversationTableView.reloadData()
-            self.questionOptionsStackView.isHidden = true
+            //self.questionOptionsStackView.isHidden = true
+            self.questionOptionsCollectionView.isHidden = true
             
             // loading and find the appropriate answer
             self.personIsLookingForAnswer = true
@@ -126,6 +133,21 @@ extension ProfileViewController : ConversationDelegate {
             
         }
     }
+}
+
+extension ProfileViewController : UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.person?.questions?.filter{ !($0.hasAlreadyBeenAsked) }.count ?? 0
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.questionOptionsCollectionView.dequeueReusableCell(withReuseIdentifier: "QuestionOptionCell", for: indexPath) as! QuestionOptionsCollectionViewCell
+        
+        let questionsToDisplay = self.person?.questions?.filter{ !($0.hasAlreadyBeenAsked) }
+        
+        cell.questionButton.setTitle(questionsToDisplay?[indexPath.row].question, for: .normal)
+        
+        return cell
+    }
 }

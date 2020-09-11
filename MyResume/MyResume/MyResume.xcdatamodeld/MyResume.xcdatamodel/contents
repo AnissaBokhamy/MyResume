@@ -12,11 +12,11 @@
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
         <attribute name="catchPhrase" optional="YES" attributeType="String"/>
-        <attribute name="experiences" optional="YES" attributeType="Transformable"/>
+        <attribute name="experiences" optional="YES" attributeType="Transformable" customClassName="[Experience]"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="photoName" optional="YES" attributeType="String"/>
-        <attribute name="questions" optional="YES" attributeType="Transformable"/>
+        <attribute name="questions" optional="YES" attributeType="Transformable" customClassName="[Question]"/>
     </entity>
     <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
         <attribute name="answer" optional="YES" attributeType="String"/>

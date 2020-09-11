@@ -14,14 +14,13 @@
 		F48916C525012AF90046DB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48916C425012AF90046DB81 /* Assets.xcassets */; };
 		F48916C825012AF90046DB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48916C625012AF90046DB81 /* LaunchScreen.storyboard */; };
 		F48916D025012BA10046DB81 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48916CF25012BA10046DB81 /* Colors.xcassets */; };
-		F48916D225017C3E0046DB81 /* LeftMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48916D125017C3E0046DB81 /* LeftMessageView.xib */; };
-		F48916D425018D490046DB81 /* RightMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48916D325018D490046DB81 /* RightMessageView.xib */; };
 		F48916D8250191B20046DB81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916D7250191B20046DB81 /* ProfileViewController.swift */; };
 		F48916DA2501993B0046DB81 /* LeftMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */; };
 		F48916DC250199650046DB81 /* RightMessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916DB250199650046DB81 /* RightMessageViewCell.swift */; };
 		F48916DE2501A19A0046DB81 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48916DD2501A19A0046DB81 /* Image.xcassets */; };
 		F48916E12507F7390046DB81 /* QuestionButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48916E02507F7380046DB81 /* QuestionButtonView.xib */; };
 		F48916E3250A3F340046DB81 /* ConversationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916E2250A3F340046DB81 /* ConversationDelegate.swift */; };
+		F48916E7250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916E6250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,14 +33,13 @@
 		F48916C725012AF90046DB81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48916C925012AF90046DB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F48916CF25012BA10046DB81 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		F48916D125017C3E0046DB81 /* LeftMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMessageView.xib; sourceTree = "<group>"; };
-		F48916D325018D490046DB81 /* RightMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightMessageView.xib; sourceTree = "<group>"; };
 		F48916D7250191B20046DB81 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessageViewCell.swift; sourceTree = "<group>"; };
 		F48916DB250199650046DB81 /* RightMessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageViewCell.swift; sourceTree = "<group>"; };
 		F48916DD2501A19A0046DB81 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		F48916E02507F7380046DB81 /* QuestionButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionButtonView.xib; sourceTree = "<group>"; };
 		F48916E2250A3F340046DB81 /* ConversationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDelegate.swift; sourceTree = "<group>"; };
+		F48916E6250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOptionsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +77,8 @@
 				F48916B825012AF30046DB81 /* AppDelegate.swift */,
 				F48916BA25012AF30046DB81 /* SceneDelegate.swift */,
 				F48916BE25012AF30046DB81 /* Main.storyboard */,
-				F48916D125017C3E0046DB81 /* LeftMessageView.xib */,
+				F48916E6250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift */,
 				F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */,
-				F48916D325018D490046DB81 /* RightMessageView.xib */,
 				F48916DB250199650046DB81 /* RightMessageViewCell.swift */,
 				F48916E02507F7380046DB81 /* QuestionButtonView.xib */,
 				F48916CF25012BA10046DB81 /* Colors.xcassets */,
@@ -160,8 +157,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F48916D225017C3E0046DB81 /* LeftMessageView.xib in Resources */,
-				F48916D425018D490046DB81 /* RightMessageView.xib in Resources */,
 				F48916C825012AF90046DB81 /* LaunchScreen.storyboard in Resources */,
 				F48916D025012BA10046DB81 /* Colors.xcassets in Resources */,
 				F48916C525012AF90046DB81 /* Assets.xcassets in Resources */,
@@ -183,6 +178,7 @@
 				F48916D8250191B20046DB81 /* ProfileViewController.swift in Sources */,
 				F48916B925012AF30046DB81 /* AppDelegate.swift in Sources */,
 				F48916BB25012AF30046DB81 /* SceneDelegate.swift in Sources */,
+				F48916E7250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift in Sources */,
 				F48916DA2501993B0046DB81 /* LeftMessageViewCell.swift in Sources */,
 				F48916E3250A3F340046DB81 /* ConversationDelegate.swift in Sources */,
 			);
