@@ -21,6 +21,7 @@
 		F48916E12507F7390046DB81 /* QuestionButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48916E02507F7380046DB81 /* QuestionButtonView.xib */; };
 		F48916E3250A3F340046DB81 /* ConversationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916E2250A3F340046DB81 /* ConversationDelegate.swift */; };
 		F48916E7250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916E6250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift */; };
+		F48916EB250BFDC90046DB81 /* ExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916EA250BFDC90046DB81 /* ExperienceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F48916E02507F7380046DB81 /* QuestionButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionButtonView.xib; sourceTree = "<group>"; };
 		F48916E2250A3F340046DB81 /* ConversationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDelegate.swift; sourceTree = "<group>"; };
 		F48916E6250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionOptionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F48916EA250BFDC90046DB81 /* ExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				F48916C625012AF90046DB81 /* LaunchScreen.storyboard */,
 				F48916C925012AF90046DB81 /* Info.plist */,
 				F48916C125012AF30046DB81 /* MyResume.xcdatamodeld */,
+				F48916EA250BFDC90046DB81 /* ExperienceView.swift */,
 			);
 			path = MyResume;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				F48916C325012AF30046DB81 /* MyResume.xcdatamodeld in Sources */,
 				F48916DC250199650046DB81 /* RightMessageViewCell.swift in Sources */,
 				F48916D8250191B20046DB81 /* ProfileViewController.swift in Sources */,
+				F48916EB250BFDC90046DB81 /* ExperienceView.swift in Sources */,
 				F48916B925012AF30046DB81 /* AppDelegate.swift in Sources */,
 				F48916BB25012AF30046DB81 /* SceneDelegate.swift in Sources */,
 				F48916E7250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift in Sources */,

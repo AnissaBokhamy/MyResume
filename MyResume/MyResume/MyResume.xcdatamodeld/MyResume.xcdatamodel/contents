@@ -3,9 +3,9 @@
     <entity name="Experience" representedClassName="Experience" syncable="YES" codeGenerationType="class">
         <attribute name="company" optional="YES" attributeType="String"/>
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="jobDescription" optional="YES" attributeType="String"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="Transformable"/>
-        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="quote" optional="YES" attributeType="String"/>
         <attribute name="skills" optional="YES" attributeType="Transformable"/>
         <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="type" optional="YES" attributeType="Transformable"/>
