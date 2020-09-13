@@ -55,6 +55,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F477D587250E971A00FD6E6C /* CellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F48916E6250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift */,
+				F48916DB250199650046DB81 /* RightMessageViewCell.swift */,
+				F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */,
+			);
+			path = CellControllers;
+			sourceTree = "<group>";
+		};
+		F477D588250E973200FD6E6C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F48916D7250191B20046DB81 /* ProfileViewController.swift */,
+				F477D587250E971A00FD6E6C /* CellControllers */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F477D589250E976800FD6E6C /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				F48916E02507F7380046DB81 /* QuestionButtonView.xib */,
+				F48916EA250BFDC90046DB81 /* ExperienceView.swift */,
+			);
+			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		F477D58B250E983B00FD6E6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F48916E2250A3F340046DB81 /* ConversationDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F477D58C250E989F00FD6E6C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F48916BE25012AF30046DB81 /* Main.storyboard */,
+				F48916C625012AF90046DB81 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F477D58D250E98B700FD6E6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F48916C125012AF30046DB81 /* MyResume.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F48916AC25012AF30046DB81 = {
 			isa = PBXGroup;
 			children = (
@@ -74,22 +127,15 @@
 		F48916B725012AF30046DB81 /* MyResume */ = {
 			isa = PBXGroup;
 			children = (
-				F48916D7250191B20046DB81 /* ProfileViewController.swift */,
-				F48916E2250A3F340046DB81 /* ConversationDelegate.swift */,
+				F477D58D250E98B700FD6E6C /* Models */,
+				F477D58C250E989F00FD6E6C /* Storyboards */,
+				F477D58B250E983B00FD6E6C /* Protocols */,
+				F477D589250E976800FD6E6C /* SupportingViews */,
+				F477D588250E973200FD6E6C /* ViewControllers */,
 				F48916B825012AF30046DB81 /* AppDelegate.swift */,
 				F48916BA25012AF30046DB81 /* SceneDelegate.swift */,
-				F48916BE25012AF30046DB81 /* Main.storyboard */,
-				F48916E6250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift */,
-				F48916D92501993B0046DB81 /* LeftMessageViewCell.swift */,
-				F48916DB250199650046DB81 /* RightMessageViewCell.swift */,
-				F48916E02507F7380046DB81 /* QuestionButtonView.xib */,
-				F48916CF25012BA10046DB81 /* Colors.xcassets */,
-				F48916C425012AF90046DB81 /* Assets.xcassets */,
 				F48916DF2501A3420046DB81 /* Ressources */,
-				F48916C625012AF90046DB81 /* LaunchScreen.storyboard */,
 				F48916C925012AF90046DB81 /* Info.plist */,
-				F48916C125012AF30046DB81 /* MyResume.xcdatamodeld */,
-				F48916EA250BFDC90046DB81 /* ExperienceView.swift */,
 			);
 			path = MyResume;
 			sourceTree = "<group>";
@@ -97,6 +143,8 @@
 		F48916DF2501A3420046DB81 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				F48916CF25012BA10046DB81 /* Colors.xcassets */,
+				F48916C425012AF90046DB81 /* Assets.xcassets */,
 				F48916DD2501A19A0046DB81 /* Image.xcassets */,
 			);
 			path = Ressources;
