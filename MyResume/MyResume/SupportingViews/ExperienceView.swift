@@ -12,6 +12,17 @@ struct ExperienceView: View {
     
     var experience: Experience?
     
+    @State var logoName : String = { () -> String in
+        switch experience?.type {
+        case .Studies:
+            return "SchoolLogo"
+        case .CodingJob:
+            return "CodingLogo"
+        default:
+            return "SchoolLogo"
+        }
+    }()
+    
     var body: some View {
         VStack {
             GeometryReader { geometry in
@@ -22,8 +33,8 @@ struct ExperienceView: View {
                 .stroke(style: StrokeStyle( lineWidth: 1, dash: [4]))
                 .foregroundColor(Color("Dark Grey"))
             }
-            //if experience?.type
-            Image("SchoolLogo")
+            if experience?.type == .Studies {
+                Image("SchoolLogo")
             Text("Maîtrise en Informatique")
                 .font(.title)
                 .foregroundColor(Color("Dark Grey"))
@@ -54,9 +65,14 @@ struct ExperienceView: View {
 
 struct ExperienceView_Previews: PreviewProvider {
     static var previews: some View {
+        guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else {
+            fatalError("Unable to read managed object context.")
+        }
+        var experience = Experience(context: context)
+        experience.type = .Studies
         ZStack {
             Color("Light Grey")
-            ExperienceView()
+            ExperienceView(experience: experience)
         }
     }
 }
