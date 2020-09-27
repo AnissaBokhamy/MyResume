@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F477D58F250E992E00FD6E6C /* ExperienceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477D58E250E992E00FD6E6C /* ExperienceType.swift */; };
 		F477D591250EA0C400FD6E6C /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477D590250EA0C400FD6E6C /* Experience.swift */; };
 		F477D593250EA17500FD6E6C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477D592250EA17500FD6E6C /* Person.swift */; };
 		F477D595250EA1D600FD6E6C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477D594250EA1D600FD6E6C /* Question.swift */; };
+		F477D5972510098100FD6E6C /* ExperienceDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477D5962510098100FD6E6C /* ExperienceDisplayViewController.swift */; };
 		F48916B925012AF30046DB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916B825012AF30046DB81 /* AppDelegate.swift */; };
 		F48916BB25012AF30046DB81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48916BA25012AF30046DB81 /* SceneDelegate.swift */; };
 		F48916C025012AF30046DB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48916BE25012AF30046DB81 /* Main.storyboard */; };
@@ -28,10 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F477D58E250E992E00FD6E6C /* ExperienceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceType.swift; sourceTree = "<group>"; };
 		F477D590250EA0C400FD6E6C /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
 		F477D592250EA17500FD6E6C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F477D594250EA1D600FD6E6C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F477D5962510098100FD6E6C /* ExperienceDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceDisplayViewController.swift; sourceTree = "<group>"; };
 		F48916B525012AF30046DB81 /* MyResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48916B825012AF30046DB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48916BA25012AF30046DB81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				F48916D7250191B20046DB81 /* ProfileViewController.swift */,
+				F477D5962510098100FD6E6C /* ExperienceDisplayViewController.swift */,
 				F477D587250E971A00FD6E6C /* CellControllers */,
 			);
 			path = ViewControllers;
@@ -111,7 +112,6 @@
 			children = (
 				F477D592250EA17500FD6E6C /* Person.swift */,
 				F477D590250EA0C400FD6E6C /* Experience.swift */,
-				F477D58E250E992E00FD6E6C /* ExperienceType.swift */,
 				F477D594250EA1D600FD6E6C /* Question.swift */,
 			);
 			path = Models;
@@ -233,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F477D5972510098100FD6E6C /* ExperienceDisplayViewController.swift in Sources */,
 				F477D591250EA0C400FD6E6C /* Experience.swift in Sources */,
 				F48916DC250199650046DB81 /* RightMessageViewCell.swift in Sources */,
 				F48916D8250191B20046DB81 /* ProfileViewController.swift in Sources */,
@@ -242,7 +243,6 @@
 				F48916BB25012AF30046DB81 /* SceneDelegate.swift in Sources */,
 				F477D595250EA1D600FD6E6C /* Question.swift in Sources */,
 				F48916E7250B6ACE0046DB81 /* QuestionOptionsCollectionViewCell.swift in Sources */,
-				F477D58F250E992E00FD6E6C /* ExperienceType.swift in Sources */,
 				F48916DA2501993B0046DB81 /* LeftMessageViewCell.swift in Sources */,
 				F48916E3250A3F340046DB81 /* ConversationDelegate.swift in Sources */,
 			);

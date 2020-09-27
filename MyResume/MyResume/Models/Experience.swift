@@ -18,5 +18,14 @@ class Experience {
     var skills: NSObject?
     var startDate: Date?
     var type: ExperienceType?
+    var descriptions: [String]?
     
+}
+
+enum ExperienceType: String {
+    case StudentJob = "Student Job"
+    case Studies = "Studies"
+    case DevelopperJob = "Developper Job"
+    case StudentProject = "Student project"
+    case PersonalProject = "Personal project"
 }

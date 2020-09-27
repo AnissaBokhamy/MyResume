@@ -14,4 +14,10 @@ class Question {
     var hasAlreadyBeenAsked: Bool
     var question: String?
     
+    init(question: String, answer: String){
+        self.question = question
+        self.answer = answer
+        self.hasAlreadyBeenAsked = false
+    }
+    
 }

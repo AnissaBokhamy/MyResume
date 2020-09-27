@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var questionOptionsCollectionView: UICollectionView!
     
     
-    weak var person : Person?
+    var person : Person?
     var personIsLookingForAnswer = false
     
     var questionsAndAnswersList = [String]()
@@ -34,10 +34,7 @@ class ProfileViewController: UIViewController {
         
         self.questionOptionsCollectionView.dataSource = self
         
-        guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else {
-            fatalError("Unable to read managed object context.")
-        }
-        self.person = Person(context: context)
+        self.person = Person()
         self.person?.firstName = "Anissa"
         self.person?.lastName = "Bokhamy"
         self.person?.photoName = "PhotoAnissa"
@@ -120,7 +117,8 @@ extension ProfileViewController : ConversationDelegate {
     func userDidAskQuestion(_ question: String) {
         if self.questionsAndAnswersList.last == "..." {
             // add question to stack view
-            self.questionsAndAnswersList.popLast()
+            let last = self.questionsAndAnswersList.popLast()
+            print(last)
             self.questionsAndAnswersList.append(question)
             self.conversationTableView.reloadData()
             //self.questionOptionsStackView.isHidden = true

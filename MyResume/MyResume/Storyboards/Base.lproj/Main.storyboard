@@ -184,7 +184,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="QuestionOptionCell" translatesAutoresizingMaskIntoConstraints="NO" id="Wtf-2d-QfT" customClass="QuestionOptionsCollectionViewCell" customModule="MyResume" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" reuseIdentifier="QuestionOptionCell" translatesAutoresizingMaskIntoConstraints="NO" id="Wtf-2d-QfT" customClass="QuestionOptionsCollectionViewCell" customModule="MyResume" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LHM-le-wm8">
@@ -267,7 +267,7 @@
         <!--Item-->
         <scene sceneID="5IF-Mu-F0a">
             <objects>
-                <viewController id="l48-DR-gBE" sceneMemberID="viewController">
+                <viewController id="l48-DR-gBE" customClass="ExperienceDisplayViewController" customModule="MyResume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iml-WP-PJd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,15 +304,20 @@
                                     <constraint firstAttribute="height" constant="47" id="bPW-of-Ay1"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-6m-vqF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-6m-vqF">
                                 <rect key="frame" x="0.0" y="131" width="414" height="682"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XGr-G9-a3S">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XGr-G9-a3S">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="682"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="XGr-G9-a3S" firstAttribute="top" secondItem="SWf-6m-vqF" secondAttribute="top" id="dZ0-pn-V9R"/>
+                                    <constraint firstAttribute="trailing" secondItem="XGr-G9-a3S" secondAttribute="trailing" id="eUv-wt-HWY"/>
+                                    <constraint firstAttribute="bottom" secondItem="XGr-G9-a3S" secondAttribute="bottom" id="fz7-F4-Bgh"/>
+                                    <constraint firstItem="XGr-G9-a3S" firstAttribute="leading" secondItem="SWf-6m-vqF" secondAttribute="leading" id="o74-vP-V0u"/>
+                                    <constraint firstItem="XGr-G9-a3S" firstAttribute="width" secondItem="SWf-6m-vqF" secondAttribute="width" id="pSo-bK-Q22"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="DZQ-Td-tM3"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="wFf-K6-SBR"/>
                             </scrollView>
@@ -321,14 +326,24 @@
                         <constraints>
                             <constraint firstItem="yYh-QL-Eg8" firstAttribute="leading" secondItem="T3c-yE-xih" secondAttribute="leading" id="2T1-pT-pi9"/>
                             <constraint firstItem="T3c-yE-xih" firstAttribute="trailing" secondItem="yYh-QL-Eg8" secondAttribute="trailing" id="4gR-36-iQ2"/>
+                            <constraint firstItem="SWf-6m-vqF" firstAttribute="top" secondItem="PKl-bq-335" secondAttribute="bottom" constant="7.5" id="9DP-EZ-mfN"/>
                             <constraint firstItem="T3c-yE-xih" firstAttribute="top" secondItem="yYh-QL-Eg8" secondAttribute="top" constant="44" id="DRw-D9-EJg"/>
+                            <constraint firstItem="SWf-6m-vqF" firstAttribute="leading" secondItem="T3c-yE-xih" secondAttribute="leading" id="Q0X-20-iU5"/>
                             <constraint firstItem="yYh-QL-Eg8" firstAttribute="leading" secondItem="T3c-yE-xih" secondAttribute="leading" id="UKH-tz-ndW"/>
                             <constraint firstItem="PKl-bq-335" firstAttribute="centerX" secondItem="T3c-yE-xih" secondAttribute="centerX" id="Uki-7c-xF0"/>
+                            <constraint firstItem="T3c-yE-xih" firstAttribute="trailing" secondItem="SWf-6m-vqF" secondAttribute="trailing" id="gYn-GP-mih"/>
                             <constraint firstItem="PKl-bq-335" firstAttribute="centerY" secondItem="yYh-QL-Eg8" secondAttribute="bottom" id="mfq-0U-IMj"/>
+                            <constraint firstItem="SWf-6m-vqF" firstAttribute="bottom" secondItem="T3c-yE-xih" secondAttribute="bottom" id="rPx-8g-QeX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T3c-yE-xih"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="DAz-B0-Ubs"/>
+                    <connections>
+                        <outlet property="experienceStackView" destination="XGr-G9-a3S" id="75N-wE-PPZ"/>
+                        <outlet property="firstNameLabel" destination="6gO-xH-T83" id="wv0-jw-RpZ"/>
+                        <outlet property="lastNameLabel" destination="RT6-Uf-fDc" id="TFx-CG-dpO"/>
+                        <outlet property="personImageView" destination="PKl-bq-335" id="P6E-O8-7PX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFe-HP-phx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

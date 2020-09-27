@@ -1,20 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
-        <attribute name="catchPhrase" optional="YES" attributeType="String"/>
-        <attribute name="experiences" optional="YES" attributeType="Transformable" customClassName="[Experience]"/>
-        <attribute name="firstName" optional="YES" attributeType="String"/>
-        <attribute name="lastName" optional="YES" attributeType="String"/>
-        <attribute name="photoName" optional="YES" attributeType="String"/>
-        <attribute name="questions" optional="YES" attributeType="Transformable" customClassName="[Question]"/>
-    </entity>
-    <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
-        <attribute name="answer" optional="YES" attributeType="String"/>
-        <attribute name="hasAlreadyBeenAsked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="question" optional="YES" attributeType="String"/>
-    </entity>
-    <elements>
-        <element name="Person" positionX="-254.92578125" positionY="-148.50390625" width="128" height="133"/>
-        <element name="Question" positionX="-358.47265625" positionY="53.18359375" width="128" height="88"/>
-    </elements>
+    <elements/>
 </model>
